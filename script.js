@@ -6,4 +6,4 @@ function llamadaApi(ciudad){
 }
 
 
-llamadaApi("");
+llamadaApi("palermo");
