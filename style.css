@@ -32,12 +32,14 @@ nav input{
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 20px;
 
 }
 .card{
     display: flex;
     flex-direction: column;
-    padding:20px;
+    padding:10px;
+    width: 200px;
 }
 .card-img{
     width: 100%;
@@ -47,10 +49,17 @@ nav input{
  margin: auto;
  font-size: 2rem;
 }
+.card-body{
+    padding: 0;
+}
 .cont-temps{
     width: 100%;
     padding: 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
+}
+.title-city{
+    display: block;
+    font-size: 1rem;
 }
