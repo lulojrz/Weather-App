@@ -1,20 +1,36 @@
 function llamadaApi(ciudad){
     fetch("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"+ ciudad + "?unitGroup=metric&include=days&key=XDDQSTKV57QNT95MTQZQP3EPK&contentType=json")
     .then(response => response.json())
-    .then(data =>  mostrarContenido(data) );
+    .then(data =>  mostrarContenido(data,ciudad) );
     
 
 }
 
 
-llamadaApi("Lima");
 
-function mostrarContenido(data){
+
+let input = document.querySelector(".city")
+let boton = document.querySelector(".search")
+let container = document.querySelector(".container-weather")
+
+boton.addEventListener("click",(e)=> {
+    e.preventDefault();
+    container.innerHTML =  ` 
+   `;
+
+
+    setTimeout(() => {
+        llamadaApi(input.value);
+      }, 5000);
+
+
+})
+
+function mostrarContenido(data,ciudad){
     let dias = data.days;
-    let title = document.querySelectorAll(".title-city")
-    let container = document.querySelector(".container-weather")
+    let title = document.querySelector(".title-city")
     container.innerHTML = "";
-    title.innerHTML =  `${data.resolvedAddress} `;
+    title.innerHTML =  `${ciudad}`;
     console.log(data)
     
 
