@@ -16,7 +16,8 @@ let container = document.querySelector(".container-weather")
 boton.addEventListener("click",(e)=> {
     e.preventDefault();
     container.innerHTML =  ` 
-   `;
+    <i class="fa-solid fa-spinner fa-spin-pulse carga"></i>
+     `
 
 
     setTimeout(() => {
